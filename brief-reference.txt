@@ -1,0 +1,653 @@
+FINAL HANDOFF DOCUMENT · DESIGN + CONTENT + IMAGE SPECS
+LunaFlora
+WEBSITE IMPLEMENTATION BRIEF
+SEASONAL FLORAL STUDIO
+“Mỗi mùa – một trải nghiệm hoa khác nhau.”
+
+HÌNH LF-H02 · Hero floral still-life – phương án dự phòng. Bình hoa flat graphic pastel đặt bên phải, để trống nhiều khoảng bên trái; có thể dùng cho Hero nếu cần đồng nhất phong cách.
+LƯU Ý  Bản này là brief nội dung và triển khai giao diện cho người dựng web. Ảnh minh họa trong Word là preview; ảnh gốc phải bàn giao ở các file riêng. Dữ liệu lịch, giá, địa chỉ và liên hệ được đánh dấu DEMO, không phải thông tin kinh doanh đã xác minh.
+Đầu ra:  5 nhóm trang: Home / Workshop Details (4 biến thể mùa) / Booking / About Us / Contact.
+Trọng tâm môn học:  Thể hiện custom typeface LunaFlora qua hierarchy, scale, layout, readability và sự nhất quán.
+Phiên bản:  01 — 11/10/2026 · Sử dụng để dựng wireframe, web mockup và trình bày quy trình thiết kế.
+00 / Quyết định dự án đã chốt
+Hạng mục
+Nội dung chính thức
+Tên dự án
+LunaFlora — Seasonal Floral Studio
+Loại web
+Website quảng bá và đăng ký workshop cắm hoa theo mùa (không phải shop bán bouquet).
+Core concept
+Mỗi mùa – một trải nghiệm hoa khác nhau.
+Đối tượng
+Người yêu hoa và người muốn trải nghiệm cắm hoa sáng tạo; thiết kế hướng tới người trẻ, nhưng không quá trẻ con.
+Art direction
+Pastel / Flat Graphic / Playful / Botanical / Soft Retro / Handmade.
+Nội dung chính
+4 workshop: Spring Bloom, Summer Meadow, Autumn Garden, Winter Bloom.
+Nền tảng
+Wix, Webnode hoặc Google Sites; ưu tiên hệ thống có thể liên kết 5 trang rõ ràng.
+Yêu cầu học phần
+Custom font LunaFlora + 1 font phụ; trình bày sketches, grid, palette, 10–20 trang PDF và link website.
+Sitemap & quy tắc điều hướng
+Menu
+Đích đến / hành vi
+Home
+Trang chủ /
+Workshops
+Nhảy tới #seasons trên trang chủ; mỗi season card mở 1 trang chi tiết.
+About
+/about
+Contact
+/contact
+Book Now
+/booking
+Explore Workshops
+Nhảy tới #seasons
+View Workshop
+Mở /workshops/spring (hoặc season đang chọn)
+Book This Workshop
+/booking?workshop=spring (giữ lựa chọn workshop)
+LƯU Ý  Workshop Details là một template có 4 biến thể Spring / Summer / Autumn / Winter. Không cần tạo thêm một trang Shop; chữ “Workshops” trên navbar dẫn tới khu vực bốn mùa tại Home.
+Luồng người dùng tối giản
+Home → chọn mùa → Workshop Details → Book This Workshop → Booking → Confirmation. Các trang About Us và Contact có thể truy cập từ navbar/footer.
+01 / Visual Identity & Typography System
+Typeface custom là trọng tâm của toàn bộ bài. Ảnh hoa dùng để nâng đỡ nội dung, không thay thế chữ. Hình dưới là specimen font mà dự án đang sử dụng làm tham chiếu.
+
+HÌNH LF-T01 · Font specimen LunaFlora. Bảng chữ hồng, chữ hoa/thường, số và dấu; ảnh tham chiếu phông chữ, không phải font cài đặt.
+LƯU Ý  QUAN TRỌNG: ảnh specimen không phải file font. Người dựng cần nhận .OTF / .TTF / .WOFF2 của LunaFlora để gõ chữ trực tiếp. Không sử dụng chữ được AI vẽ sẵn trên ảnh như typography thật của web.
+Quy định font cố định
+Vai trò
+Font
+Cỡ desktop (tham khảo)
+Quy tắc
+Logo / Display
+LunaFlora custom
+80–96 px
+Ưu tiên Home hero, có thể nhỏ lại khi mobile.
+H1
+LunaFlora custom
+58–68 px
+Tên mùa / tên trang; line-height 1.1–1.2.
+H2 / Quote
+LunaFlora custom
+40–48 px
+Dùng chọn lọc, không quá 2 heading trang trí liên tiếp.
+H3 / Card name
+LunaFlora custom
+25–30 px
+Tên season hoặc Featured Workshop.
+Navigation / Button
+DM Sans Medium
+14–16 px
+Dễ đọc, không dùng display font.
+Body
+DM Sans Regular
+16–18 px
+Line-height 1.5–1.65.
+Caption / Form
+DM Sans Regular
+13–15 px
+Nhãn form rõ ràng, tối thiểu 14 px ở mobile.
+Font phụ chốt:  DM Sans (không luân phiên DM Sans và Manrope trong cùng hệ thống).
+Gợi ý kỹ thuật:  Chuyển font custom thành WOFF2, khai báo @font-face, kiểm tra đủ glyph tiếng Anh và ký tự cần thiết.
+02 / Color Palette & Grid System
+Bảng màu chọn từ reference pastel đã gửi; màu chữ đậm được thêm như giải pháp khả năng đọc, không thay thế moodboard.
+Vai trò
+HEX
+Sử dụng
+Cream / Base
+#F2E8CB
+Accent nền mềm; body chính có thể sáng hơn để tăng độ thoáng.
+Canvas cream
+#FFF9F0
+Nền website chủ đạo, khoảng trắng.
+Blush Rose
+#E3969F
+Họa tiết hồng / decorative accent; không dùng đoạn body dài.
+Soft Blue
+#A0C3D9
+Nền mùa Spring hoặc Winter, card phụ.
+Muted Teal
+#699091
+Họa tiết, lá, thông tin phụ có cỡ chữ lớn.
+Butter Cream
+#F2E8CB
+Summer / seasonal highlights.
+Light Lilac
+#BD9DC4
+Các hoa tím / accent.
+Soft Green
+#E8E9C7
+Accent xanh nhạt / form background.
+Dark Ink*
+#274C4A
+Body/nav/button chữ; màu thêm để giữ contrast đủ mạnh.
+* Màu chữ Dark Ink là đề xuất kỹ thuật bổ sung. Hồng pastel trên nền cream không đủ tương phản cho paragraph hoặc form nhỏ; giữ hồng cho display to, icon và họa tiết.
+Responsive grid — giao người dựng web
+Kích thước
+Grid
+Content / Margin
+Ứng dụng
+Desktop ≥ 1200px
+12 cột; gap 24px
+Max-width 1200px; margin auto
+Hero 2 cột, 4 season cards 4 cột, booking 2 cột.
+Tablet 768–1199px
+8 cột; gap 16px
+Margin 32px
+Season cards 2 × 2; hình và chữ cân lại.
+Mobile ≤ 767px
+4 cột; gap 12px
+Margin 20px
+Season cards 1 cột; hero chữ trước ảnh sau; form 1 cột.
+Spacing & components
+Spacing scale: 8 / 12 / 16 / 24 / 32 / 48 / 64 / 96 px; section desktop thường cách nhau 80–100px.
+Border radius: card 16–24px; button pill 999px hoặc bo góc 20px; đồng bộ trong toàn web.
+Buttons: Primary nền Dark Ink, chữ sáng; Secondary nền hồng nhạt/viền, không dùng chữ hồng nhạt trên cream.
+Ảnh: seasonal card 4:5; hero 16:9 hoặc vùng 6:5 bên phải; detail cover 4:3 hoặc 16:9; xuất bản web bằng WebP/PNG.
+03 / Asset Library — ảnh gốc có sẵn
+Các mã LF-xx dùng xuyên suốt tài liệu. Tên file gốc được ghi đầy đủ để tìm chính xác; hình trong Word chỉ là thumbnail preview.
+
+LF-H01  Hero workshop – 4 nhân vật
+
+LF-H02  Hero floral still-life – phương án dự phòng
+
+LF-F01  Featured Workshop / Booking
+
+LF-A01  About / Brand Story
+Asset
+Tên file gốc
+Mục đích / tình trạng
+LF-H01
+bốn_cô_bé_cắm_hoa_trong_căn_phòng_pastel.png
+Home Hero / illustration 4 nhân vật. ĐÃ CÓ.
+LF-H02
+minh_họa_bó_hoa_pastel_tối_giản.png
+Hero graphic thay thế khi cần tổng thể hoàn toàn không có nhân vật. ĐÃ CÓ.
+LF-F01
+không_gian_cắm_hoa_pastel_lunaflora.png
+Featured Workshop + Booking minh họa bouquet và dụng cụ. ĐÃ CÓ.
+LF-A01
+tĩnh_vật_hoa_và_sổ_tay_pastel.png
+Home About và About Us. ĐÃ CÓ.
+04 / Seasonal Cards — bốn ảnh độc lập
+Dùng bộ card mới nhất, font nhãn mùa chỉ được xem là tham chiếu thị giác. Khi dựng thực tế cần dùng chữ HTML/CSS bằng LunaFlora custom; có thể xuất bản card không chữ để tránh double text.
+
+LF-S01  Season Card – Spring
+
+LF-S02  Season Card – Summer
+
+LF-S03  Season Card – Autumn
+
+LF-S04  Season Card – Winter
+Mã
+Tên web
+Tính cách mùa
+Dùng ở đâu
+LF-S01
+Spring Bloom
+Hồng/xanh nhẹ, tulip, daffodil, hyacinth, lily of the valley
+Home Season 01 / Details Spring thumbnail
+LF-S02
+Summer Meadow
+Vàng ấm, hướng dương, lavender, hydrangea, chamomile
+Home Season 02 / Details Summer thumbnail
+LF-S03
+Autumn Garden
+Cam đất/hồng, chrysanthemum, dahlia, cosmos, marigold
+Home Season 03 / Details Autumn thumbnail
+LF-S04
+Winter Bloom
+Xanh lạnh/đỏ, camellia, hellebore, poinsettia, snowdrop
+Home Season 04 / Details Winter thumbnail
+LƯU Ý  SỬA LỖI FILE CŨ: Spring Bloom không được dùng sheet hoa winter. Bộ mùa đông trong tài liệu trước từng đặt ở vị trí mùa xuân, cần thay bằng LF-S01.
+05 / Individual Flower Cards — chỉ dẫn tách file
+Trong trang Details, mục “Flowers of the Season” cần từng ảnh hoa độc lập. Các sheet nguồn hiện có nhưng chưa tách thành 16 assets cuối cùng.
+
+LF-D01  Bộ flower cards – Spring
+
+LF-D02  Bộ flower cards – Summer
+
+LF-D03  Bộ flower cards – Autumn
+
+LF-D04  Bộ flower cards – Winter
+Sheet / tên nguồn
+Phải xuất 4 ảnh RIÊNG
+LF-D01 · bộ_sưu_tập_hoa_xuân_pastel.png
+spring_tulip.png / spring_daffodil.png / spring_lily_of_the_valley.png / spring_hyacinth.png
+LF-D02 · bộ_bốn_hoa_pastel_lunaflora.png
+summer_sunflower.png / summer_lavender.png / summer_hydrangea.png / summer_chamomile.png
+LF-D03 · bộ_sưu_tập_hoa_lunaflora_pastel.png
+autumn_chrysanthemum.png / autumn_dahlia.png / autumn_cosmos.png / autumn_marigold.png
+LF-D04 · bộ_sưu_tập_hoa_xuân_thanh_nhã.png
+winter_camellia.png / winter_hellebore.png / winter_poinsettia.png / winter_snowdrop.png
+Output: 16 file PNG/WebP tỉ lệ 4:5; mỗi ảnh chỉ có 1 bó/bình hoa, không có chữ. Tên hoa / nhãn mô tả do website render bằng chữ thật.
+LƯU Ý  Tách trực tiếp theo ô trong sheet có thể còn nền/card và chữ. Nếu cần PNG trong suốt hoàn toàn phải tách illustration riêng; đánh dấu là công việc hậu kỳ, KHÔNG được coi là đã có sẵn.
+06 / HOME — chi tiết từng section
+URL: / · MỤC TIÊU: HIỂU THƯƠNG HIỆU → CHỌN MÙA → ĐẶT WORKSHOP
+H01. Header / Navbar
+Nội dung hiển thị:  LunaFlora  |  Home  |  Workshops  |  About  |  Contact  |  Book Now
+Layout:  Logo trái; navigation phải; Book Now dùng nút primary. Mobile menu hamburger.
+Typography:  Logo custom 26–32px; menu DM Sans 15px; sticky header tùy năng lực nền tảng.
+H02. Hero
+Eyebrow:  SEASONAL FLORAL STUDIO
+Display:  LunaFlora
+Headline:  Celebrate every season through flowers.
+Description:  Discover floral workshops inspired by the colors, flowers and feelings of each season.
+Primary CTA:  Explore Workshops → #seasons
+Ảnh:  LF-H01 (nhóm 4 nhân vật workshop) là hướng trong file demo. LF-H02 là phương án thay thế nếu muốn toàn bộ hệ minh họa flat graphic đồng nhất hơn.
+Dựng:  Cột trái chữ chiếm khoảng 55%, cột phải ảnh 45%; không vẽ chữ vào ảnh. Trên mobile xếp chữ trước ảnh.
+
+HÌNH LF-H01 · Hero workshop – 4 nhân vật. Tranh 4 nhân vật minh họa đang làm hoa, nền cream, bên trái thoáng; dùng Home Hero.
+H03. Flowers Through the Seasons
+Heading:  Flowers Through the Seasons
+Description:  Every season brings its own flowers, colors and creative experience.
+Card
+Copy chính xác (web text)
+Asset / Link
+01 · Spring Bloom
+Soft colors and fresh spring flowers.
+LF-S01 → /workshops/spring
+02 · Summer Meadow
+Bright blooms inspired by sunny summer gardens.
+LF-S02 → /workshops/summer
+03 · Autumn Garden
+Warm seasonal flowers in rich autumn tones.
+LF-S03 → /workshops/autumn
+04 · Winter Bloom
+Soft winter florals with festive seasonal accents.
+LF-S04 → /workshops/winter
+Mỗi card:  Ảnh 4:5 → Season name bằng LunaFlora → 1 dòng description bằng DM Sans → Explore →.
+07 / HOME — phần còn lại
+H04. Featured Workshop
+Label:  FEATURED WORKSHOP
+Heading:  Spring Bloom
+Subheading:  Seasonal Floral Workshop
+Body:  Explore the freshness of spring through soft colors, seasonal flowers and hands-on floral arranging.
+Info row:  Duration — 2 hours  |  Level — Beginner friendly  |  Materials — Included
+CTA:  View Workshop → /workshops/spring
+Ảnh:  LF-F01; bố cục ảnh trái / text phải, đảo chiều so với hero.
+
+HÌNH LF-F01 · Featured Workshop / Booking. Bó hoa tulip bọc giấy, nơ hồng, kéo, ribbon, bình hoa; minh họa flat graphic đặt lệch phải.
+H05. About LunaFlora (teaser)
+Heading:  About LunaFlora
+Display quote:  Flowers change with the seasons. So do the stories we create with them.
+Body:  LunaFlora is a seasonal floral studio creating hands-on workshops inspired by the beauty and character of each season.
+CTA:  Our Story → /about
+Ảnh:  LF-A01, crop 4:3, không dùng trùng lặp quá gần Featured.
+H06. Big Typography Section
+Display:  BLOOM WITH THE SEASONS
+Bố cục:  Chữ LunaFlora đặt giữa, chia 2–3 dòng lớn; nền cream + pattern đơn sắc opacity 4–8%. KHÔNG đặt ảnh lớn.
+H07. CTA cuối trang
+Heading:  Create something beautiful this season.
+CTA:  Book a Workshop → /booking
+Background:  Pattern pastel P02 (cần xuất, xem mục 13), opacity 5–10% hoặc một vài icon hoa nhỏ.
+H08. Footer
+Brand:  LunaFlora · Seasonal Floral Studio
+Links:  Workshops | About | Contact | Instagram | Email
+Bottom line:  © 2026 LunaFlora. Concept website for academic demonstration.
+08 / WORKSHOP DETAILS — template chuẩn
+URL: /WORKSHOPS/{SPRING|SUMMER|AUTUMN|WINTER}
+Bốn phiên bản theo mùa dùng chung một layout, chỉ thay content, hoa, accent màu và lịch giá tương ứng. Để giữ 5 nhóm trang theo đề, đây là một mẫu “Details” được dùng lặp lại.
+D01. Details Hero
+Display:  [WORKSHOP NAME]
+Subline:  Seasonal Floral Workshop
+Description:  [DESCRIPTION BY SEASON] — điền theo bảng ở trang tiếp theo.
+Ảnh:  Key visual riêng cho mùa tương ứng. 4 card LF-S01–S04 được phép dùng làm thumbnail, nhưng cover Details 4:3/ngang vẫn nên xuất ảnh riêng LF-K01–K04 (CHƯA CÓ).
+D02. About the Workshop
+Heading:  About the Workshop
+Text:  Dùng đoạn giới thiệu riêng theo mùa ở mục 09; không lặp Spring cho ba mùa khác.
+D03. What You’ll Experience
+Create
+Learn
+Take Home
+Create your own seasonal floral arrangement.
+Learn basic floral composition and color pairing.
+Bring your completed arrangement home.
+D04. Flowers of the Season
+Layout:  4 flower cards ngang trên desktop / 2 × 2 tablet / 1 cột mobile; ảnh độc lập + flower name + chú thích ngắn.
+Assets:  Dùng 4 file xuất ra từ LF-D01, D02, D03 hoặc D04 (xem danh sách đủ ở mục 05).
+D05. Workshop Information
+Fields:  Date, Time, Duration, Location, Price, Capacity, Materials Included, Level.
+CTA:  Book This Workshop → /booking?workshop=[season]
+D06. Related Season (tuỳ chọn)
+Content:  Explore Another Season → hiển thị 3 season cards còn lại.
+LƯU Ý  Không cần thêm một nút “Add to Cart” hoặc checkout bán bouquet: mục đích đã chốt là booking trải nghiệm workshop.
+09 / WORKSHOP DETAILS — nội dung đủ 4 mùa
+COMPLETE ENGLISH COPY · READY TO PASTE INTO UI
+SPRING  /  Spring Bloom
+Hero description:  Spring awakens with soft colors, fresh tulips and delicate seasonal blooms. Create a gentle floral arrangement inspired by the first days of spring.
+About text:  Spring Bloom celebrates the fresh colors and delicate flowers of spring through a relaxed hands-on floral experience. You will explore simple bouquet balance and pastel color pairing, then create an arrangement to bring home.
+Flowers:  Tulip · Daffodil · Hyacinth · Lily of the Valley
+Date / Time / Price:  17 Apr 2027 · 10:00–12:00 · 450,000 VND · Duration 2 hours · 12 guests max.
+Asset:  LF-S01 cho thumbnail; LF-D01 là nguồn 4 flower cards; cover ngang riêng LF-K01 cần xuất nếu cần.
+
+SUMMER  /  Summer Meadow
+Hero description:  Bright sunflowers, airy daisies and vivid summer colors come together in a joyful flower workshop.
+About text:  Summer Meadow brings the energy of sunlit gardens into an easy, hands-on floral session. Discover how to combine bold focal flowers with lighter fillers, and make a bouquet full of warmth and movement.
+Flowers:  Sunflower · Lavender · Hydrangea · Chamomile
+Date / Time / Price:  19 Jun 2027 · 14:00–16:00 · 480,000 VND · Duration 2 hours · 12 guests max.
+Asset:  LF-S02 cho thumbnail; LF-D02 là nguồn 4 flower cards; cover ngang riêng LF-K02 cần xuất nếu cần.
+
+AUTUMN  /  Autumn Garden
+Hero description:  Discover cozy color stories with warm seasonal blooms, textured leaves and soft earthy tones.
+About text:  Autumn Garden is inspired by the comforting colors of changing leaves and late-season blossoms. Try layering flower shapes and warm color combinations to make an arrangement that feels personal and seasonal.
+Flowers:  Chrysanthemum · Dahlia · Cosmos · Marigold
+Date / Time / Price:  24 Oct 2026 · 10:00–12:00 · 490,000 VND · Duration 2 hours · 12 guests max.
+Asset:  LF-S03 cho thumbnail; LF-D03 là nguồn 4 flower cards; cover ngang riêng LF-K03 cần xuất nếu cần.
+
+WINTER  /  Winter Bloom
+Hero description:  Celebrate the quiet beauty of winter with soft petals, festive color accents and thoughtful handmade details.
+About text:  Winter Bloom explores contrast, gentle structure and seasonal character through cool greens, pale flowers and cheerful red highlights. Complete a balanced winter bouquet to take home as a seasonal keepsake.
+Flowers:  Camellia · Hellebore · Poinsettia · Snowdrop
+Date / Time / Price:  12 Dec 2026 · 14:00–16:00 · 520,000 VND · Duration 2 hours · 12 guests max.
+Asset:  LF-S04 cho thumbnail; LF-D04 là nguồn 4 flower cards; cover ngang riêng LF-K04 cần xuất nếu cần.
+
+LƯU Ý  Tất cả ngày, giờ và giá trên trang này là DỮ LIỆU DEMO để mockup được liên kết nhất quán. Không phải lịch mở bán thật. Cần thay đồng loạt trong Details và Booking nếu nhóm có dữ liệu chính thức.
+10 / BOOKING — giao diện và trạng thái đầy đủ
+URL: /BOOKING · ACTION: RESERVE A FLORAL EXPERIENCE
+H1:  Book Your Workshop
+Subheading:  Choose your season and reserve your floral experience.
+Layout:  Form trái 58%; illustration phải 42% desktop. Mobile xếp form trước, illustration phía sau hoặc ẩn bớt.
+Ảnh:  LF-F01, dùng crop nhẹ. Không đặt form lên vùng nhiều họa tiết.
+Field / label UI
+Control
+Nội dung / validation
+Choose Workshop *
+Dropdown
+Spring Bloom / Summer Meadow / Autumn Garden / Winter Bloom; preselect khi đi từ Details.
+Select Date *
+Date selection
+Hiển thị ngày tương ứng workshop trong data demo, không cho ngày trống.
+Select Time *
+Time selection
+Hiển thị slot demo 10:00 / 14:00 tương ứng mùa.
+Number of Guests *
+Stepper / Select
+1–4 guests mỗi lần đặt; kiểm tra capacity demo.
+Full Name *
+Text input
+Required; label không phụ thuộc placeholder.
+Email Address *
+Email input
+Required; kiểm tra định dạng email.
+Phone Number
+Tel input
+Optional cho mockup; có thể yêu cầu nếu nhóm muốn xác nhận lịch.
+Special Note
+Textarea
+Optional; tối đa 300 ký tự.
+Workshop Summary
+Read-only block
+Season / Date / Time / Guests / Total price (được tính theo số lượng).
+Confirm Booking
+Button
+Nút action; khi bấm cần hiển thị demo confirmation hoặc trang trạng thái.
+Booking Summary demo
+Selected Workshop: Spring Bloom   |   Date: 17 Apr 2027   |   Time: 10:00–12:00   |   Guests: 1   |   Total: 450,000 VND
+Success state (UI cần thiết kế)
+Title:  Your floral experience is reserved!
+Text:  Thank you for booking with LunaFlora. We look forward to creating something beautiful with you.
+CTA:  Back to Home
+Error / empty state
+Please complete the required fields before confirming your booking.
+LƯU Ý  Nếu dựng mockup mà không có backend, nút Confirm Booking chỉ cần dẫn tới trạng thái “Demo confirmation”. Không thông báo đã thanh toán hoặc đặt chỗ thật.
+11 / ABOUT US — content hoàn chỉnh
+URL: /ABOUT · MỤC TIÊU: GIẢI THÍCH CONCEPT VÀ WORKSHOP
+A01. Hero
+H1:  Our Story
+Subheading:  Every season, a different floral story.
+Intro:  LunaFlora is a seasonal floral studio inspired by the changing beauty of nature. Through flowers, colors, and hands-on workshops, we create a new experience for every season.
+Ảnh:  LF-A01, cân xứng với headline, nhiều khoảng thở.
+
+HÌNH LF-A01 · About / Brand Story. Bình hoa, sổ tay minh họa, thiệp, ruy băng; ảnh tĩnh vật để kể câu chuyện studio.
+A02. Our Idea
+Heading:  Flowers Through the Seasons
+Body:  Flowers change throughout the year, and each season brings its own colors, textures, and mood. LunaFlora turns these seasonal changes into creative floral workshops where every arrangement tells a different story.
+A03. Why Seasonal Flowers? — 3 cards
+Seasonal Beauty
+Creative Moments
+Something to Remember
+Discover flowers at their most expressive time of year.
+Explore color, composition, and floral arranging through hands-on making.
+Take home your own arrangement as a little memory of the season.
+A04. Big Typography Quote
+Quote bằng LunaFlora:  Every season, a different way to bloom.
+Style:  Font cực lớn trên cream, chỉ cần một nhánh hoa nhỏ hoặc pattern opacity thấp.
+A05. Our Space
+Heading:  A Place to Create & Bloom
+Body:  LunaFlora is designed as a warm and playful space where flowers, creativity, and seasonal inspiration come together.
+Visual:  LF-H01 chi tiết workshop hoặc illustration phụ đồng style; không dùng ảnh người thật.
+CTA:  Explore Workshops → #seasons (trang Home)
+12 / CONTACT — content hoàn chỉnh
+URL: /CONTACT · MỤC TIÊU: ĐỂ LẠI LỜI NHẮN / TÌM THÔNG TIN
+H1:  Let’s Bloom Together
+Intro:  Have a question about our seasonal workshops? We’d love to hear from you.
+Layout:  Cột trái: contact information + form. Cột phải: illustration góc nhỏ LF-C01 chưa có file riêng.
+Contact Information — DỮ LIỆU DEMO
+Label
+Nội dung hiển thị trên mockup
+Email
+hello@lunaflora.example  (địa chỉ mẫu, không gửi mail thực tế)
+Instagram
+@lunaflora.demo  (handle mẫu, không mặc định có tài khoản thật)
+Studio Location
+Ho Chi Minh City, Vietnam  (khu vực mẫu, chưa phải địa chỉ mở cửa)
+Opening Hours
+Sat – Sun  |  09:00–18:00  (giờ demo cho workshop)
+Contact form
+UI Field
+Interaction
+Full Name *
+Required text field
+Email Address *
+Required email field
+Message *
+Required textarea
+Send Message
+Primary button / demo success state
+Success Title:  Your message has been sent!
+Success Text:  Thank you for reaching out. We’ll get back to you soon.
+Illustration spec:  LF-C01 — 1 bình hoa flat graphic pastel đặt góc phải/dưới, khoảng 500 × 600 px, PNG transparent, KHÔNG chữ, không lấy nguyên ảnh full-width.
+LƯU Ý  Nếu chưa có email, Instagram, địa chỉ thật thì phải đánh dấu DEMO rõ ràng trên bản thuyết trình. Không tự dùng dữ liệu này để công bố như business thật.
+13 / Assets còn thiếu cần chuẩn bị
+MISSING DELIVERABLES · MÔ TẢ ĐỦ ĐỂ GIAO THIẾT KẾ
+Mã cần làm
+Định dạng
+Mô tả & nơi dùng
+LF-K01
+4:3 / 16:9
+Spring detail cover: bouquet hồng/xanh + tulip, daffodil, hyacinth, lily of the valley; space cho H1.
+LF-K02
+4:3 / 16:9
+Summer detail cover: sunflower vàng chủ đạo, lavender tím, hydrangea xanh, chamomile; nhẹ, nắng, không chèn chữ.
+LF-K03
+4:3 / 16:9
+Autumn detail cover: chrysanthemum, dahlia, cosmos, marigold; ấm, lá chuyển màu, berries, nét flat.
+LF-K04
+4:3 / 16:9
+Winter detail cover: poinsettia, camellia, hellebore, snowdrop; xanh lạnh + đỏ vừa phải, không biến thành Christmas sale.
+LF-C01
+PNG transparent
+Một bình hoa nhỏ đơn giản với 3–5 nhành pastel; góc trang Contact, dễ đặt cạnh form.
+LF-P01
+Tile SVG/PNG
+Pattern đơn sắc: hoa 5 cánh, lá nhỏ, nét ít, màu hồng nhạt/kem, dùng Typography/Quote opacity 4–8%.
+LF-P02
+Tile SVG/PNG
+Pattern phối 2–3 màu pastel: tulip/cúc/cánh hoa, dùng CTA opacity 5–10%; không đặt lên body dài.
+LF-M01
+12 PNG/SVG
+Floral icons: tulip, cúc, lá, nơ, cánh rơi, cành hoa, sao nhỏ… từng element độc lập và có phiên bản trong suốt.
+LF-FONT
+OTF/TTF/WOFF2
+Bộ font LunaFlora thực tế; ảnh specimen không thay thế được.
+LF-WF
+PDF / JPG
+Sketch & wireframe cho 5 nhóm trang (desktop, mobile); do nhóm design thực hiện.
+Quy định xuất asset
+01 file = 01 ảnh dùng độc lập. Không ghép các card thành một sheet final; sheet chỉ dùng làm nguồn.
+Ảnh không chèn chữ: tên mùa, label, caption, nút sẽ được gõ bằng font của website. Nếu ảnh nguồn có chữ, tạo phiên bản clean khi xuất.
+Không thêm người thật hoặc stock photo; visual language nhất quán: flat graphic, nét ít, pastel, không blur/3D.
+Đặt tên theo mã LF-… để giảm nhầm asset giữa các trang, lưu cả bản gốc và bản nén WebP.
+14 / UI Behavior & Responsive Requirements
+Interaction matrix
+Component
+Hành vi bắt buộc trong bản demo
+Navigation
+Menu click đúng mục; trang hiện tại được đánh dấu, mobile có menu mở/đóng.
+Season Cards
+Toàn card hoặc nút Explore dẫn đúng biến thể Details.
+Workshop Details
+CTA Book This Workshop mang tham số workshop sang Booking.
+Booking form
+Có required validation, chọn ngày giờ tương ứng, summary, success feedback.
+Contact form
+Required validation và success feedback; không gửi email thật nếu không cấu hình.
+Footer
+Link nội bộ hoạt động; nút social external chỉ hoạt động khi URL thật đã có.
+Tính dễ đọc và accessibility
+Navigation, body, label form và caption dùng DM Sans. Chữ LunaFlora trang trí chỉ ở heading lớn/quote.
+Không dùng hồng pastel (#E3969F) làm body text cỡ nhỏ trên nền cream; dùng Dark Ink #274C4A cho phần đọc nhiều.
+Button cao tối thiểu khoảng 44px; trạng thái hover/focus rõ; màu không phải tín hiệu duy nhất.
+Ảnh có alt text mô tả nội dung: ví dụ “Four illustrated friends arranging flowers together at LunaFlora workshop.”
+Các ảnh gallery/card nên lazy-load; đặt đúng chiều/crop; mobile tránh chữ đè lên hoa.
+Responsive test checklist
+Desktop 1440px
+Tablet 820px
+Mobile 390px
+Hero 2 cột; 4 season cards/hàng
+Hero có thể 2 cột hoặc stack; 2 card/hàng
+Hero stack; 1 card/hàng
+Booking 2 cột
+Booking gần như 1 cột
+Form 1 cột; nút full-width
+Heading hiển thị 1–3 dòng
+Heading co lại theo container
+Heading tối đa 48–56px tùy glyph
+15 / Handoff cho người dựng & bài nộp môn
+Cấu trúc folder nên giao
+01_Brand_Fonts/   LunaFlora.ttf | LunaFlora.woff2 | DM Sans (link nguồn)
+02_Images_Hero/   LF-H01 | LF-H02 | LF-F01 | LF-A01
+03_Season_Cards/   LF-S01 | LF-S02 | LF-S03 | LF-S04
+04_Flower_Elements/   16 flower files (tách từ LF-D01–D04)
+05_Details_Covers/   LF-K01 | LF-K02 | LF-K03 | LF-K04
+06_Decorative/   LF-C01 | LF-P01 | LF-P02 | LF-M01 icons
+07_Content_UI/   LunaFlora_Website_Brief_Hoan_Chinh.docx
+08_Design_Review/   sketches | wireframes | desktop/mobile screens
+Bộ PDF 10–20 trang nộp thầy: đề xuất 16 trang
+Slide
+Nội dung
+01
+Cover: LunaFlora / concept
+02
+Project brief & goal
+03
+Target audience & user journey
+04
+Moodboard / art direction
+05
+Custom typeface specimen
+06
+Typography system + hierarchy
+07
+Color palette + contrast
+08
+Initial sketches
+09
+Wireframes / information architecture
+10
+Desktop & mobile grid
+11
+Homepage UI
+12
+Seasonal cards + Details UI
+13
+Booking UI + form state
+14
+About / Contact UI
+15
+Brand motif / asset system
+16
+Full website screens + live URL / reflection
+Kiểm tra cuối trước khi gửi web
+☐ 5 nhóm trang đầy đủ, link giữa các page chạy đúng.
+☐ Thông tin 4 mùa khớp tên, giá, ngày, hình và loại hoa.
+☐ Không có hình mùa đông đặt nhầm trong Spring.
+☐ Custom font thật hiển thị trên web (không phải chữ trong ảnh).
+☐ Ảnh gốc tách riêng theo mã; khác nhau giữa Hero, Details và Booking.
+☐ Mobile không vỡ chữ; body và form đủ tương phản.
+☐ Mockup ghi rõ thông tin giả định; không nhận booking/thanh toán thật.
+☐ Có sketches, grids, palettes, bản PDF 10–20 trang và link website.
+16 / Asset Index — bảng tra nhanh khi dựng
+ID
+Mô tả asset
+Tên file để tìm
+Trạng thái
+LF-T01
+Font specimen LunaFlora
+image(20261011-141757).png
+REFERENCE FONT
+LF-H01
+Hero workshop – 4 nhân vật
+bốn_cô_bé_cắm_hoa_trong_căn_phòng_pastel.png
+ĐÃ CÓ
+LF-H02
+Hero floral still-life – phương án dự phòng
+minh_họa_bó_hoa_pastel_tối_giản.png
+ĐÃ CÓ
+LF-S01
+Season Card – Spring
+bó_hoa_mùa_xuân_pastel_đáng_yêu.png
+ĐÃ CÓ
+LF-S02
+Season Card – Summer
+bó_hoa_mùa_hè_pastel_chữ_summer.png
+ĐÃ CÓ
+LF-S03
+Season Card – Autumn
+bó_hoa_mùa_thu_ngọt_ngào.png
+ĐÃ CÓ
+LF-S04
+Season Card – Winter
+thiệp_hoa_mùa_đông_pastel.png
+ĐÃ CÓ
+LF-F01
+Featured Workshop / Booking
+không_gian_cắm_hoa_pastel_lunaflora.png
+ĐÃ CÓ
+LF-A01
+About / Brand Story
+tĩnh_vật_hoa_và_sổ_tay_pastel.png
+ĐÃ CÓ
+LF-D01
+Bộ flower cards – Spring
+bộ_sưu_tập_hoa_xuân_pastel.png
+CÓ SHEET / CẦN TÁCH
+LF-D02
+Bộ flower cards – Summer
+bộ_bốn_hoa_pastel_lunaflora.png
+CÓ SHEET / CẦN TÁCH
+LF-D03
+Bộ flower cards – Autumn
+bộ_sưu_tập_hoa_lunaflora_pastel.png
+CÓ SHEET / CẦN TÁCH
+LF-D04
+Bộ flower cards – Winter
+bộ_sưu_tập_hoa_xuân_thanh_nhã.png
+CÓ SHEET / CẦN TÁCH
+LF-E01
+Tham chiếu hệ mùa tổng hợp
+lịch_hoa_bốn_mùa_pastel.png
+REFERENCE
+LF-R01
+Reference branding vui nhộn
+image(20261011-045125).png
+REFERENCE
+LF-R02
+Reference botanical branding
+image(20261011-045154).png
+REFERENCE
+Ghi chú nguồn / cách sử dụng
+Tài liệu nội dung được biên tập, chuẩn hóa dựa trên file “hihi.docx” người dùng gửi. Các file ảnh đi kèm đều là asset có sẵn trong thư mục dự án. Các ngày workshop, giá, địa chỉ và contact trên mockup là dữ liệu mô phỏng được bổ sung để thiết kế đầy đủ, không phải thông tin đã được người dùng xác nhận.
+Ảnh tham chiếu typography/branding được dùng để định hướng hình và chữ; phải sử dụng font LunaFlora thật trên website khi hoàn thiện.
