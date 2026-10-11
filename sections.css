@@ -1,0 +1,180 @@
+/* LunaFlora v2: richer sections, patterns, season theming. Loaded after styles.css. */
+:root{--spring:#a0c3d9;--summer:#f2e8cb;--autumn:#f1c4b5;--winter:#c9dbe8;--lilac:#bd9dc4;--teal:#699091;--rose-ink:#99515c}
+.season-ribbon svg,.steps svg,.why-card svg,.contact-list svg,.experience svg,.success-icon,svg.petal{fill:currentColor}
+
+/* Hero */
+.hero{isolation:isolate}
+.petal{position:absolute;width:44px;height:44px;z-index:0;pointer-events:none;opacity:.9}
+.p1{top:36px;left:46%;color:var(--rose);animation:drift 7s ease-in-out infinite}
+.p2{bottom:34px;left:38%;width:34px;height:34px;color:var(--teal);animation:drift 9s 1s ease-in-out infinite reverse}
+.p3{top:46%;left:-22px;width:28px;height:28px;color:var(--lilac);animation:drift 8s .5s ease-in-out infinite}
+@keyframes drift{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-14px) rotate(14deg)}}
+.hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:18px 30px}
+.hero-pills{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:28px 0 0}
+.hero-pills li{background:var(--green);border-radius:999px;padding:6px 14px;font-size:13px;font-weight:500}
+.season-ribbon{align-items:center;flex-wrap:wrap}
+.season-ribbon svg{width:16px;height:16px;color:var(--rose)}
+
+/* Season cards */
+.season-no{position:absolute;top:14px;left:14px;width:38px;height:38px;border-radius:50%;background:var(--canvas);display:grid;place-items:center;font-family:LunaFlora,Georgia,serif;font-size:17px;color:var(--ink);z-index:1}
+.season-image.spring{background:var(--spring)}.season-image.summer{background:var(--summer)}.season-image.autumn{background:var(--autumn)}.season-image.winter{background:var(--winter)}
+.season-card{transition:transform .4s var(--ease)}
+.season-card:hover{transform:translateY(-6px)}
+.card-copy p{flex:0 0 auto}
+.card-meta{font-size:13px;font-weight:600;margin-bottom:14px;color:#4d7071}
+.demo-line{font-size:13px;margin:34px auto 0;text-align:center;opacity:.85;max-width:none}
+
+/* How it works */
+.steps-band{background:linear-gradient(var(--canvas),#f7ece4 40%,var(--canvas))}
+.steps-band .section{padding-block:80px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;list-style:none;padding:0;margin:0}
+.steps li{position:relative;background:var(--canvas);border:1px solid var(--line);border-radius:var(--radius);padding:34px 28px 30px}
+.steps li:nth-child(1) svg{color:var(--rose)}.steps li:nth-child(2) svg{color:var(--teal)}.steps li:nth-child(3) svg{color:var(--lilac)}
+.steps svg{width:46px;height:46px;margin-bottom:18px}
+.steps h3{font-size:28px;line-height:1.25;margin-bottom:8px}
+.steps p{font-size:15px}
+.step-no{position:absolute;top:22px;right:26px;font-family:LunaFlora,Georgia,serif;font-size:44px;line-height:1;color:var(--soft);-webkit-text-stroke:1px var(--line)}
+
+/* Featured */
+.featured-copy .sub{margin-top:-8px!important;font-weight:600;color:var(--rose-ink)}
+.info-row{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:12px 34px;margin:28px 0;border-top:1px solid var(--line);padding-top:20px}
+.info-row dt{font-size:11px;text-transform:uppercase;letter-spacing:.1em;opacity:.8}
+.info-row dd{margin:2px 0 0;font-size:15px;font-weight:600}
+
+/* Schedule */
+.schedule-list{list-style:none;padding:0;margin:0;display:grid;gap:14px}
+.schedule-row{display:grid;grid-template-columns:96px 1fr auto auto;align-items:center;gap:24px;background:var(--canvas);border:1px solid var(--line);border-left:8px solid var(--c,var(--rose));border-radius:var(--radius);padding:18px 26px 18px 18px;transition:transform .3s var(--ease),box-shadow .3s}
+.schedule-row:hover{transform:translateX(4px);box-shadow:0 10px 26px #274c4a12}
+.schedule-row.spring{--c:var(--spring)}.schedule-row.summer{--c:#e8c97a}.schedule-row.autumn{--c:#e39b7e}.schedule-row.winter{--c:#9fbdd0}
+.schedule-row time{display:grid;place-items:center;background:var(--green);border-radius:16px;padding:10px 6px;text-align:center;line-height:1.1}
+.schedule-row .day{font-family:LunaFlora,Georgia,serif;font-size:40px}
+.schedule-row .mon{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.08em}
+.sch-main h3{font-size:30px;line-height:1.2}.sch-main p{font-size:14px}
+.low{color:#a03c4e;font-weight:600}
+.sch-price{font-size:18px;font-weight:700;text-align:right}.sch-price small{display:block;font-size:12px;font-weight:400}
+.sch-actions{display:flex;align-items:center;gap:22px}.sch-actions .text-link{font-size:13px}
+
+/* Flower strip */
+.strip{overflow:hidden;padding-block:40px 70px;background:var(--soft)}
+.strip-head{margin-bottom:30px}
+.strip-track{display:flex;width:max-content;animation:marquee 70s linear infinite}
+.strip-track:hover,.strip-track:focus-within{animation-play-state:paused}
+.strip-inner{display:flex;gap:18px;padding-right:18px}
+.tile{width:170px;padding:0;background:var(--canvas);border-radius:20px;overflow:hidden;text-align:center;display:flex;flex-direction:column;transition:transform .3s var(--ease)}
+.tile:hover{transform:translateY(-6px) rotate(-1.5deg)}
+.tile img{aspect-ratio:4/5;object-fit:cover;width:100%}
+.tile span{font-size:13px;font-weight:600;padding:10px 6px 12px}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+/* Why seasonal */
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding-bottom:30px}
+.why-card{border-radius:var(--radius);padding:34px 30px 38px}
+.why-card.rose{background:#f4dcdc}.why-card.blue{background:#dbe8f0}.why-card.butter{background:var(--soft)}
+.why-card svg{width:42px;height:42px;margin-bottom:16px;color:var(--teal)}.why-card.rose svg{color:#b8566a}
+.why-card h3{font-size:30px;line-height:1.2;margin-bottom:10px}.why-card p{font-size:15px}
+
+/* Pattern backgrounds (LF-P01 / LF-P02) */
+.type-section,.cta{position:relative;isolation:isolate}
+.type-section:before,.cta:before{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none}
+.type-section:before{background:url('assets/patterns/LF-P01_mono.svg');opacity:.09}
+.cta:before{background:url('assets/patterns/LF-P02_multi.svg');opacity:.14}
+
+/* FAQ */
+.faq{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px;align-items:start}
+.faq-intro p:not(.eyebrow){margin:22px 0}
+.faq-list details{border-bottom:1px solid var(--line)}.faq-list details:first-child{border-top:1px solid var(--line)}
+.faq-list summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:20px 0;font-weight:600;font-size:16px;min-height:44px}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary:after{content:'+';font-size:26px;font-weight:400;line-height:1;transition:transform .3s}
+.faq-list details[open] summary:after{transform:rotate(45deg)}
+.faq-list details p{padding:0 40px 22px 0;font-size:15px}
+
+/* CTA */
+.cta{display:block;background:#f4e0dc;border-block:1px solid #e3969f45;padding-block:84px}
+.cta-inner{display:flex;align-items:center;justify-content:space-between;gap:30px}
+
+/* Contact + footer */
+.contact-list{list-style:none;margin:20px 0 0;padding:0}
+.contact-list li{display:flex;gap:16px;align-items:center;padding-block:14px;border-bottom:1px solid var(--line);font-size:15px}
+.contact-list svg{width:26px;height:26px;flex:none;color:var(--rose-ink)}
+.contact-list span{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.1em;opacity:.8}
+.contact-list.compact li{padding-block:10px;font-size:14px}
+.footer{padding-top:56px}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.1fr;gap:40px;align-items:start}
+.footer nav{display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+.footer h3{font-family:'DM Sans',Arial,sans-serif;font-size:12px;text-transform:uppercase;letter-spacing:.14em;font-weight:700;margin-bottom:6px}
+.footer-brand .wordmark{font-size:38px}
+.footer-quote{font-family:LunaFlora,Georgia,serif;font-size:22px!important;line-height:1.3;margin-top:18px!important}
+.footer-info p{font-size:14px;margin:0 0 14px}
+.footer nav a,.footer nav button{font-size:14px;text-align:left;min-height:28px}
+.footer-bottom{font-size:12px}
+
+/* Modal: season theming */
+dialog[data-season]{border-top:10px solid var(--accent,var(--line))}
+dialog[data-season=spring]{--accent:var(--spring)}dialog[data-season=summer]{--accent:#e8c97a}dialog[data-season=autumn]{--accent:#e39b7e}dialog[data-season=winter]{--accent:#9fbdd0}
+.tagline{font-family:LunaFlora,Georgia,serif;font-size:24px;line-height:1.3;color:var(--rose-ink);margin-top:8px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0 0 24px}
+.chips li{background:var(--green);border-radius:999px;padding:6px 14px;font-size:13px;font-weight:600}
+.detail-intro img{background:var(--accent,var(--soft))}
+.experience p{background:var(--green);border-radius:var(--radius);padding:22px;flex:1}
+.experience svg{width:30px;height:30px;display:block;margin-bottom:10px;color:var(--teal)}
+.flower-grid figcaption{font-size:13px;line-height:1.45}
+.flower-grid figcaption strong{display:block;font-size:14px;margin-bottom:2px}
+.related{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.related-card{display:flex;align-items:center;gap:14px;background:var(--green);border-radius:18px;padding:10px;text-align:left;font-size:13px;transition:transform .3s var(--ease)}
+.related-card:hover{transform:translateY(-4px)}
+.related-card img{width:64px;height:72px;object-fit:cover;border-radius:12px}
+.related-card strong{display:block;font-size:15px}
+
+/* Forms */
+.field .label,.field em{font-weight:600}.field em{font-weight:400;opacity:.8}
+.field small{font-size:12px;opacity:.85}#note-count{align-self:flex-end}
+input:hover,select:hover,textarea:hover{border-color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:3px solid #a44e613d;border-color:#a44e61}
+input[aria-invalid=true],select[aria-invalid=true],textarea[aria-invalid=true]{border-color:#a03c4e;background:#fff3f3}
+.form-error{background:#fbe4e4;border:1px solid #a03c4e;color:#7a2434;border-radius:12px;padding:12px 16px;font-size:14px;font-weight:600;margin-bottom:18px}
+.form-error[hidden]{display:none}
+.stepper{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.stepper button{width:44px;height:44px;border-radius:50%;border:1px solid var(--ink);background:var(--canvas);font-size:22px;line-height:1;transition:background .2s}
+.stepper button:hover{background:var(--rose)}
+.stepper output{min-width:28px;text-align:center;font-size:20px;font-weight:700}
+.summary{position:sticky;top:0}
+.success-icon{width:64px;height:64px;color:var(--rose);margin:0 auto 14px;animation:spin 9s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.receipt{background:var(--green);border-radius:var(--radius);padding:18px 22px;margin:20px auto;max-width:360px}.receipt p{margin:4px auto}
+.story-quote{font-family:LunaFlora,Georgia,serif;font-size:clamp(30px,4.5vw,46px);line-height:1.2;color:#ac5d6e;margin:34px 0 4px!important;max-width:none}
+
+@media(max-width:1100px){
+  .steps{gap:16px}
+  .schedule-row{grid-template-columns:84px 1fr auto;gap:18px}.sch-price{grid-column:2}.sch-actions{grid-column:3;grid-row:1/3;flex-direction:column;align-items:flex-end;gap:6px}
+  .faq{gap:40px}.footer-top{grid-template-columns:1fr 1fr;gap:34px}.related{grid-template-columns:1fr}.why-card h3{font-size:26px}
+}
+@media(max-width:767px){
+  .petal,.season-ribbon svg{display:none}.hero-pills{margin-top:22px}
+  .steps,.why-grid{grid-template-columns:1fr}.steps li{padding:28px 24px}.steps-band .section{padding-block:52px}
+  .info-row{grid-template-columns:1fr 1fr}
+  .schedule-row{grid-template-columns:70px 1fr;padding:14px;gap:10px 14px}.schedule-row .day{font-size:32px}.sch-main h3{font-size:25px}
+  .sch-price{grid-column:1/-1;text-align:left;display:flex;gap:8px;align-items:baseline;font-size:16px}
+  .sch-actions{grid-column:1/-1;grid-row:auto;flex-direction:row;justify-content:space-between;align-items:center}
+  .tile{width:132px}
+  .faq{grid-template-columns:1fr;gap:26px}.faq-list details p{padding-right:0}
+  .cta{padding-block:56px}.cta-inner{flex-direction:column;align-items:flex-start}
+  .footer-top{grid-template-columns:1fr 1fr;gap:28px 18px}.footer-brand{grid-column:1/-1}
+  .summary{position:static}.facts{grid-template-columns:1fr}.related{grid-template-columns:1fr}.tagline{font-size:21px}.stepper small{flex-basis:100%}
+}
+@media(prefers-reduced-motion:reduce){
+  .strip-track{animation:none;overflow-x:auto;width:auto}.strip-inner[aria-hidden]{display:none}
+  .petal,.success-icon{animation:none!important}
+}
+
+/* Typography tuning: tighter tracking for the LunaFlora display font */
+h1,h2,h3,.wordmark,.big-type,.season-name,.season-no,.season-ribbon span,.tagline,.step-no,.schedule-row .day,.footer-quote,.story-quote{letter-spacing:-.045em}
+.big-type{letter-spacing:-.05em}
+/* Home headings in capitals (LunaFlora display font only) */
+.hero h1{text-transform:uppercase}
+.hero h2{text-transform:none;letter-spacing:-.045em}
+.hero h1{letter-spacing:-.03em}
+
+.hero h1{font-size:clamp(52px,6vw,88px)}
+@media(max-width:767px){.hero h1{font-size:clamp(44px,13vw,60px)}}
+.hero h1{font-size:clamp(48px,5vw,74px)}@media(max-width:767px){.hero h1{font-size:clamp(44px,13vw,60px)}}

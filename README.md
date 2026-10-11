@@ -1,25 +1,19 @@
-# LunaFlora
+# LunaFlora — Seasonal Floral Studio
 
-Website HTML/CSS/JavaScript thuần, sử dụng font và hình minh họa từ bộ bàn giao.
+Website HTML/CSS/JavaScript thuần (concept website cho môn học). Không cần cài đặt hay build: mở `index.html` bằng Chrome/Edge, hoặc deploy thẳng lên GitHub Pages.
 
-## Mở trang
+## Cấu trúc
+- `index.html`: toàn bộ nội dung trang chủ.
+- `styles.css`: nền tảng (font, màu, layout, responsive). `sections.css`: các section mở rộng, pattern, màu theo mùa.
+- `script.js`: dữ liệu 4 workshop, dialog (Details / Booking / About / Contact), form, lịch, dải hoa.
+- `assets/fonts/`: LunaFlora + DM Sans. `assets/images/`: ảnh gốc PNG + WebP. `assets/patterns/`: pattern LF-P01, LF-P02. `assets/favicon.svg`.
 
-Mở `index.html` bằng Chrome hoặc Edge. Không cần cài đặt, không cần build, có thể chạy offline.
+## Có gì
+Hero, 4 season card, How it works, Featured Workshop, lịch sắp tới, dải 16 loài hoa, About + Why seasonal, Big typography, FAQ, CTA, Contact, Footer 4 cột.
+Mỗi mùa có dialog riêng (màu theo mùa, mô tả hoa, thông tin, gợi ý mùa khác). Booking: chọn mùa, ngày/giờ đồng bộ, stepper 1–4 khách, tổng tiền, validation + thông báo lỗi, màn hình xác nhận demo.
 
-## Các file chính
+## Deep link
+`#workshop-spring|summer|autumn|winter`, `#book-spring` (giữ workshop đã chọn), `#story`, `#message`. Nút Back của trình duyệt đóng dialog.
 
-- `index.html`: nội dung và bố cục trang chính.
-- `styles.css`: bảng màu, font, responsive, hover và animation.
-- `script.js`: menu mobile, scroll reveal, bốn workshop, form booking và contact.
-- `assets/fonts/`: font LunaFlora và DM Sans, kèm giấy phép DM Sans.
-- `assets/images/`: hình gốc PNG và bản WebP tối ưu.
-
-## Tương tác
-
-Header sticky, điều hướng cuộn mượt, trạng thái menu theo section; card hover và scroll reveal. Mỗi mùa mở chi tiết với bốn loại hoa đúng bộ bàn giao. Booking giữ mùa vừa chọn, đồng bộ ngày/giờ, tính giá cho 1–4 khách, kiểm tra trường bắt buộc và email, hiển thị xác nhận demo. Menu mobile, dialog đóng bằng Escape, focus bàn phím và chế độ giảm chuyển động được hỗ trợ.
-
-Theo yêu cầu một trang web, các nội dung Details, Booking, About và Contact mở trong dialog thay vì các trang URL riêng. Màu nền cream được giữ cố định theo nhận diện trong brief.
-
-Lịch, giá, địa điểm, email và Instagram là dữ liệu demo trong brief. Trang không lưu dữ liệu, không gửi email, không nhận đặt chỗ hay thanh toán thực tế.
-
-Font DM Sans tải từ kho Google Fonts chính thức, sử dụng theo SIL Open Font License. Font LunaFlora và hình minh họa do người dùng cung cấp.
+## Lưu ý
+Ngày, giá, số chỗ, địa chỉ, email, Instagram là dữ liệu DEMO theo brief. Trang không lưu dữ liệu, không gửi email, không nhận đặt chỗ hay thanh toán thật.

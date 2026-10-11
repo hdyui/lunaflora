@@ -5,12 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#FFF9F0">
   <meta name="description" content="LunaFlora seasonal floral studio. Explore four seasons of creative, hands-on floral workshops.">
+  <meta property="og:title" content="LunaFlora | Seasonal Floral Studio">
+  <meta property="og:description" content="Every season, a different way to bloom. Hands-on floral workshops for spring, summer, autumn and winter.">
+  <meta property="og:image" content="assets/images/LF-H01_Workshop_Illustrated_Hero.webp">
   <title>LunaFlora | Seasonal Floral Studio</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/LunaFlora-Regular.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="sections.css">
   <script src="script.js" defer></script>
 </head>
 <body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-flower" viewBox="0 0 48 48"><g fill="currentColor"><ellipse cx="24" cy="12" rx="8" ry="11"/><ellipse cx="24" cy="12" rx="8" ry="11" transform="rotate(72 24 24)"/><ellipse cx="24" cy="12" rx="8" ry="11" transform="rotate(144 24 24)"/><ellipse cx="24" cy="12" rx="8" ry="11" transform="rotate(216 24 24)"/><ellipse cx="24" cy="12" rx="8" ry="11" transform="rotate(288 24 24)"/></g><circle cx="24" cy="24" r="5" fill="#fff9f0"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 48 48"><path d="M6 42C6 20 20 6 42 6c0 22-14 36-36 36Z" fill="currentColor"/><path d="M8 40 34 14" stroke="#fff9f0" stroke-width="2" fill="none" stroke-linecap="round"/></symbol>
+    <symbol id="i-scissors" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><circle cx="12" cy="36" r="6"/><circle cx="36" cy="36" r="6"/><path d="M16 31 38 8M32 31 10 8"/></g></symbol>
+    <symbol id="i-book" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"><path d="M24 12c-4-3-10-4-16-3v28c6-1 12 0 16 3 4-3 10-4 16-3V9c-6-1-12 0-16 3Z"/><path d="M24 12v28"/></g></symbol>
+    <symbol id="i-gift" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><rect x="7" y="19" width="34" height="22" rx="3"/><path d="M5 13h38v6H5zM24 13v28"/><path d="M24 13c-6 0-10-2-10-5s5-4 10 5c5-9 10-8 10-5s-4 5-10 5Z"/></g></symbol>
+    <symbol id="i-pin" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"><path d="M24 43S9 30 9 19a15 15 0 0 1 30 0c0 11-15 24-15 24Z"/><circle cx="24" cy="19" r="5"/></g></symbol>
+    <symbol id="i-clock" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><circle cx="24" cy="24" r="17"/><path d="M24 14v10l7 5"/></g></symbol>
+    <symbol id="i-mail" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"><rect x="6" y="11" width="36" height="26" rx="4"/><path d="m8 14 16 13 16-13"/></g></symbol>
+    <symbol id="i-insta" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3"><rect x="8" y="8" width="32" height="32" rx="10"/><circle cx="24" cy="24" r="7.5"/><circle cx="33" cy="15" r="1.5" fill="currentColor"/></g></symbol>
+  </svg>
+
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="top-note">A little creativity. A handful of flowers. A season to remember.</div>
   <div id="header-marker" aria-hidden="true"></div>
@@ -20,45 +37,112 @@
       <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="navigation"><span></span><span></span></button>
       <nav id="navigation" aria-label="Main navigation">
         <a href="#home" class="active">Home</a><a href="#seasons">Workshops</a><a href="#about">About</a><a href="#contact">Contact</a>
-        <button class="button small" data-book="spring">Book Now <span aria-hidden="true">↗</span></button>
+        <button class="button small" data-book="">Book Now <span aria-hidden="true">↗</span></button>
       </nav>
     </div>
   </header>
+
   <main id="main">
     <section class="hero container" id="home">
+      <svg class="petal p1" aria-hidden="true"><use href="#i-flower"/></svg>
+      <svg class="petal p2" aria-hidden="true"><use href="#i-leaf"/></svg>
+      <svg class="petal p3" aria-hidden="true"><use href="#i-flower"/></svg>
       <div class="hero-copy">
         <p class="eyebrow">Seasonal Floral Studio</p>
         <h1>LunaFlora</h1>
         <h2>Celebrate every season<br>through flowers.</h2>
         <p class="intro">Discover floral workshops inspired by the colors, flowers and feelings of each season.</p>
-        <a class="button" href="#seasons">Explore Workshops <span aria-hidden="true">↗</span></a>
-        <p class="hero-footnote">Make with your hands. Bloom in your own way.</p>
+        <div class="hero-actions"><a class="button" href="#seasons">Explore Workshops <span aria-hidden="true">↗</span></a><button class="text-link" data-schedule>See upcoming dates <span aria-hidden="true">↗</span></button></div>
+        <ul class="hero-pills" aria-label="Workshop highlights"><li>2-hour sessions</li><li>Materials included</li><li>Beginner friendly</li></ul>
       </div>
       <div class="hero-art"><img src="assets/images/LF-H01_Workshop_Illustrated_Hero.webp" alt="Four illustrated friends arranging flowers together in a pastel studio." width="1400" height="788" fetchpriority="high"></div>
     </section>
-    <div class="season-ribbon" aria-hidden="true"><span>Spring blooms</span><span>Summer meadows</span><span>Autumn gardens</span><span>Winter wonders</span></div>
+
+    <div class="season-ribbon" aria-hidden="true"><span>Spring blooms</span><svg><use href="#i-flower"/></svg><span>Summer meadows</span><svg><use href="#i-flower"/></svg><span>Autumn gardens</span><svg><use href="#i-flower"/></svg><span>Winter wonders</span></div>
+
     <section class="section container" id="seasons">
       <div class="section-heading reveal"><p class="eyebrow">Find your floral moment</p><h2>Flowers Through<br>the Seasons</h2><p>Every season brings its own flowers,<br>colors and creative experience.</p></div>
       <div class="season-grid">
-        <button class="season-card reveal" data-details="spring"><div class="season-image spring"><img src="assets/images/LF-S01_SPRING_NO_TEXT.webp" alt="Pastel spring bouquet with pink tulips and delicate blossoms." width="1032" height="1135" loading="lazy"><span class="season-name">Spring</span></div><div class="card-copy"><h3>Spring Bloom</h3><p>Soft colors and fresh spring flowers.</p><span class="text-link">Explore workshop <span aria-hidden="true">↗</span></span></div></button>
-        <button class="season-card reveal" data-details="summer"><div class="season-image summer"><img src="assets/images/LF-S02_SUMMER_NO_TEXT.webp" alt="Summer bouquet with sunflowers, lavender and blue hydrangeas." width="1032" height="1135" loading="lazy"><span class="season-name">Summer</span></div><div class="card-copy"><h3>Summer Meadow</h3><p>Bright blooms inspired by sunny summer gardens.</p><span class="text-link">Explore workshop <span aria-hidden="true">↗</span></span></div></button>
-        <button class="season-card reveal" data-details="autumn"><div class="season-image autumn"><img src="assets/images/LF-S03_AUTUMN_NO_TEXT.webp" alt="Autumn bouquet with warm pink, orange and red seasonal flowers." width="1032" height="1135" loading="lazy"><span class="season-name">Autumn</span></div><div class="card-copy"><h3>Autumn Garden</h3><p>Warm seasonal flowers in rich autumn tones.</p><span class="text-link">Explore workshop <span aria-hidden="true">↗</span></span></div></button>
-        <button class="season-card reveal" data-details="winter"><div class="season-image winter"><img src="assets/images/LF-S04_WINTER_NO_TEXT.webp" alt="Winter bouquet with poinsettia, pale blossoms and cool green leaves." width="1032" height="1135" loading="lazy"><span class="season-name">Winter</span></div><div class="card-copy"><h3>Winter Bloom</h3><p>Soft winter florals with festive seasonal accents.</p><span class="text-link">Explore workshop <span aria-hidden="true">↗</span></span></div></button>
+        <button class="season-card reveal" data-details="spring"><div class="season-image spring"><img src="assets/images/LF-S01_SPRING_NO_TEXT.webp" alt="Pastel spring bouquet with pink tulips and delicate blossoms." width="1032" height="1135" loading="lazy"><span class="season-no">01</span><span class="season-name">Spring</span></div><div class="card-copy"><h3>Spring Bloom</h3><p>Soft colors and fresh spring flowers.</p><span class="card-meta">17 Apr 2027 · 450,000 VND</span><span class="text-link">Explore workshop <span aria-hidden="true">↗</span></span></div></button>
+        <button class="season-card reveal" data-details="summer"><div class="season-image summer"><img src="assets/images/LF-S02_SUMMER_NO_TEXT.webp" alt="Summer bouquet with sunflowers, lavender and blue hydrangeas." width="1032" height="1135" loading="lazy"><span class="season-no">02</span><span class="season-name">Summer</span></div><div class="card-copy"><h3>Summer Meadow</h3><p>Bright blooms inspired by sunny summer gardens.</p><span class="card-meta">19 Jun 2027 · 480,000 VND</span><span class="text-link">Explore workshop <span aria-hidden="true">↗</span></span></div></button>
+        <button class="season-card reveal" data-details="autumn"><div class="season-image autumn"><img src="assets/images/LF-S03_AUTUMN_NO_TEXT.webp" alt="Autumn bouquet with warm pink, orange and red seasonal flowers." width="1032" height="1135" loading="lazy"><span class="season-no">03</span><span class="season-name">Autumn</span></div><div class="card-copy"><h3>Autumn Garden</h3><p>Warm seasonal flowers in rich autumn tones.</p><span class="card-meta">24 Oct 2026 · 490,000 VND</span><span class="text-link">Explore workshop <span aria-hidden="true">↗</span></span></div></button>
+        <button class="season-card reveal" data-details="winter"><div class="season-image winter"><img src="assets/images/LF-S04_WINTER_NO_TEXT.webp" alt="Winter bouquet with poinsettia, pale blossoms and cool green leaves." width="1032" height="1135" loading="lazy"><span class="season-no">04</span><span class="season-name">Winter</span></div><div class="card-copy"><h3>Winter Bloom</h3><p>Soft winter florals with festive seasonal accents.</p><span class="card-meta">12 Dec 2026 · 520,000 VND</span><span class="text-link">Explore workshop <span aria-hidden="true">↗</span></span></div></button>
+      </div>
+      <p class="demo-line">Dates and prices are demo data for this concept website.</p>
+    </section>
+
+    <section class="steps-band">
+      <div class="container section">
+        <div class="section-heading reveal"><p class="eyebrow">How it works</p><h2>From first petal<br>to bouquet</h2><p>Three easy steps. No experience needed, just curiosity.</p></div>
+        <ol class="steps">
+          <li class="reveal"><span class="step-no">1</span><svg aria-hidden="true"><use href="#i-flower"/></svg><h3>Choose your season</h3><p>Pick the flowers, colors and mood that match you. Each season is its own little story.</p></li>
+          <li class="reveal"><span class="step-no">2</span><svg aria-hidden="true"><use href="#i-book"/></svg><h3>Reserve your seat</h3><p>Book one to four seats in a small group of up to 12 guests. Pick a date and you are done.</p></li>
+          <li class="reveal"><span class="step-no">3</span><svg aria-hidden="true"><use href="#i-scissors"/></svg><h3>Arrange &amp; take home</h3><p>Learn simple composition and color pairing, then bring your finished bouquet home.</p></li>
+        </ol>
       </div>
     </section>
+
     <section class="featured section container reveal">
       <div class="featured-art"><img src="assets/images/LF-F01_Featured_Workshop_and_Booking.webp" alt="An illustrated bouquet, pink ribbon and floral arranging tools." width="1400" height="1050" loading="lazy"></div>
-      <div class="featured-copy"><p class="eyebrow">Featured Workshop</p><h2>Spring Bloom</h2><p>Explore the freshness of spring through soft colors, seasonal flowers and hands-on floral arranging.</p><div class="workshop-facts"><span>2 hours of making</span><span>Materials included</span><span>Beginners welcome</span></div><button class="button" data-details="spring">View Workshop <span aria-hidden="true">↗</span></button><p class="caption">Workshop schedules and prices are demo data.</p></div>
+      <div class="featured-copy"><p class="eyebrow">Featured Workshop</p><h2>Spring Bloom</h2><p class="sub">Seasonal Floral Workshop</p><p>Explore the freshness of spring through soft colors, seasonal flowers and hands-on floral arranging.</p>
+        <dl class="info-row"><div><dt>Duration</dt><dd>2 hours</dd></div><div><dt>Level</dt><dd>Beginner friendly</dd></div><div><dt>Materials</dt><dd>Included</dd></div></dl>
+        <button class="button" data-details="spring">View Workshop <span aria-hidden="true">↗</span></button><p class="caption">Workshop schedules and prices are demo data.</p></div>
     </section>
+
+    <section class="schedule section container" id="schedule">
+      <div class="section-heading reveal"><p class="eyebrow">Upcoming sessions</p><h2>Save the date</h2><p>Four seasons, four dates. Small groups keep every session relaxed and hands-on.</p></div>
+      <ul class="schedule-list" id="schedule-list"></ul>
+      <p class="demo-line">Demo schedule. Seat counts are illustrative; no real reservations are taken.</p>
+    </section>
+
+    <section class="strip" aria-label="Flowers of the four seasons"><div class="strip-head container reveal"><p class="eyebrow">Sixteen flowers · four seasons</p><h2>Meet the blooms</h2></div><div class="strip-track" id="strip-track"></div></section>
+
     <section class="about section container" id="about">
       <div class="about-copy reveal"><p class="eyebrow">About LunaFlora</p><h2>Flowers change<br>with the seasons.<br>So do our stories.</h2><p>LunaFlora is a seasonal floral studio creating hands-on workshops inspired by the beauty and character of each season.</p><button class="text-link" data-story>Our Story <span aria-hidden="true">↗</span></button></div>
       <div class="about-art reveal"><img src="assets/images/LF-A01_About_Story.webp" alt="A flower-filled vase, illustrated notebook and ribbons on a pastel table." width="1400" height="1050" loading="lazy"></div>
     </section>
+
+    <section class="container why">
+      <div class="section-heading reveal"><p class="eyebrow">Why seasonal flowers?</p><h2>Three little reasons</h2></div>
+      <div class="why-grid">
+        <article class="why-card reveal rose"><svg aria-hidden="true"><use href="#i-flower"/></svg><h3>Seasonal Beauty</h3><p>Discover flowers at their most expressive time of year.</p></article>
+        <article class="why-card reveal blue"><svg aria-hidden="true"><use href="#i-scissors"/></svg><h3>Creative Moments</h3><p>Explore color, composition, and floral arranging through hands-on making.</p></article>
+        <article class="why-card reveal butter"><svg aria-hidden="true"><use href="#i-gift"/></svg><h3>Something to Remember</h3><p>Take home your own arrangement as a little memory of the season.</p></article>
+      </div>
+    </section>
+
     <section class="type-section reveal" aria-label="Bloom with the seasons"><p class="eyebrow">Every season, a different way to bloom.</p><p class="big-type">Bloom with<br><span>the seasons</span></p></section>
-    <section class="cta section container reveal"><div><p class="eyebrow">Something beautiful starts here</p><h2>Create something<br>beautiful this season.</h2></div><button class="button" data-book="spring">Book a Workshop <span aria-hidden="true">↗</span></button></section>
-    <section class="contact section container" id="contact"><div class="reveal"><p class="eyebrow">Let’s Bloom Together</p><h2>A question?<br>A floral idea?</h2><p>Have a question about our seasonal workshops? We’d love to hear from you.</p><button class="text-link" data-contact>Leave us a message <span aria-hidden="true">↗</span></button></div><div class="contact-info reveal"><p class="demo-label">Concept studio / demo information</p><dl><div><dt>Email</dt><dd>hello@lunaflora.example</dd></div><div><dt>Instagram</dt><dd>@lunaflora.demo</dd></div><div><dt>Studio</dt><dd>Ho Chi Minh City, Vietnam</dd></div><div><dt>Workshop hours</dt><dd>Sat – Sun | 09:00–18:00</dd></div></dl></div></section>
+
+    <section class="faq section container" id="faq">
+      <div class="faq-intro reveal"><p class="eyebrow">Good to know</p><h2>Questions,<br>answered</h2><p>Still curious? Send us a message and we will happily help.</p><button class="text-link" data-contact>Ask us anything <span aria-hidden="true">↗</span></button></div>
+      <div class="faq-list reveal">
+        <details><summary>Do I need any floral experience?</summary><p>Not at all. Every workshop is beginner friendly. We guide you through simple bouquet balance and color pairing step by step.</p></details>
+        <details><summary>What is included in the price?</summary><p>All flowers, greenery, wrapping and tools are included. You only need to bring yourself and a little curiosity.</p></details>
+        <details><summary>How many people can I book for?</summary><p>You can reserve one to four seats per booking. Each session welcomes up to 12 guests so everyone gets personal attention.</p></details>
+        <details><summary>How long does a workshop last?</summary><p>Every session lasts two hours, including a short introduction to the season’s flowers.</p></details>
+        <details><summary>Can I take my arrangement home?</summary><p>Yes. Your finished arrangement is yours to keep as a small memory of the season.</p></details>
+        <details><summary>Is this a real booking?</summary><p>Not yet. LunaFlora is a concept website for academic demonstration, so dates, prices and contact details are demo data and nothing is stored or charged.</p></details>
+      </div>
+    </section>
+
+    <section class="cta reveal"><div class="container cta-inner"><div><p class="eyebrow">Something beautiful starts here</p><h2>Create something<br>beautiful this season.</h2></div><button class="button" data-book="">Book a Workshop <span aria-hidden="true">↗</span></button></div></section>
+
+    <section class="contact section container" id="contact"><div class="reveal"><p class="eyebrow">Let’s Bloom Together</p><h2>A question?<br>A floral idea?</h2><p>Have a question about our seasonal workshops? We’d love to hear from you.</p><button class="text-link" data-contact>Leave us a message <span aria-hidden="true">↗</span></button></div>
+      <div class="contact-info reveal"><p class="demo-label">Concept studio / demo information</p>
+        <ul class="contact-list">
+          <li><svg aria-hidden="true"><use href="#i-mail"/></svg><div><span>Email</span>hello@lunaflora.example</div></li>
+          <li><svg aria-hidden="true"><use href="#i-insta"/></svg><div><span>Instagram</span>@lunaflora.demo</div></li>
+          <li><svg aria-hidden="true"><use href="#i-pin"/></svg><div><span>Studio</span>Ho Chi Minh City, Vietnam</div></li>
+          <li><svg aria-hidden="true"><use href="#i-clock"/></svg><div><span>Workshop hours</span>Sat – Sun | 09:00–18:00</div></li>
+        </ul>
+      </div></section>
   </main>
-  <footer class="footer"><div class="container footer-top"><div><a class="wordmark" href="#home">LunaFlora</a><p>Seasonal Floral Studio</p></div><nav aria-label="Footer navigation"><a href="#seasons">Workshops</a><a href="#about">About</a><a href="#contact">Contact</a><button data-contact>Email</button></nav></div><div class="container footer-bottom"><p>© 2026 LunaFlora. Concept website for academic demonstration.</p><a href="#home">Back to top ↑</a></div></footer>
+
+  <footer class="footer"><div class="container footer-top"><div class="footer-brand"><a class="wordmark" href="#home">LunaFlora</a><p>Seasonal Floral Studio</p><p class="footer-quote">Every season, a different way to bloom.</p></div>
+    <nav aria-label="Footer navigation"><h3>Explore</h3><a href="#seasons">Workshops</a><a href="#schedule">Schedule</a><a href="#about">About</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav>
+    <nav aria-label="Seasons"><h3>Seasons</h3><button data-details="spring">Spring Bloom</button><button data-details="summer">Summer Meadow</button><button data-details="autumn">Autumn Garden</button><button data-details="winter">Winter Bloom</button></nav>
+    <div class="footer-info"><h3>Visit</h3><p>Ho Chi Minh City, Vietnam<br>Sat – Sun | 09:00–18:00</p><button class="text-link" data-contact>Email us <span aria-hidden="true">↗</span></button></div></div>
+    <div class="container footer-bottom"><p>© 2026 LunaFlora. Concept website for academic demonstration.</p><a href="#home">Back to top ↑</a></div></footer>
   <dialog id="modal" aria-labelledby="modal-title"><button class="close-modal" aria-label="Close dialog">×</button><div id="modal-content"></div></dialog>
 </body>
 </html>
